@@ -1,10 +1,10 @@
-## Project Name
+## LovingSitter Project
 
-This is a little description about your project.
+An app where users can find or offer pet sitting services.
 
 **Tech Stack:** MongoDB, Express.js, React.js, Node.js, Typescript
 
-**Contributors**: [Hatchways](https://github.com/hatchways) (replace)
+**Contributors**: [Trevor(trevorjr31)](https://github.com/trevorjr31)
 
 ---
 
