@@ -1,14 +1,11 @@
 import { AppBar, Box, Typography } from '@material-ui/core';
 import logo from '../../Images/pawlogo.png';
-import LoggedInNavBarLinks from './NavBarLinks/loggedIn/NavBarLinks';
 import LoggedOutNavBarLinks from './NavBarLinks/loggedOut/NavBarLinks';
 import useStyles from './useStyles';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import { useAuth } from '../../context/useAuthContext';
 
 function NavBar(): JSX.Element {
   const classes = useStyles();
-  const user = useAuth().loggedInUser;
 
   return (
     <AppBar color="transparent" position="static" className={classes.root} elevation={0}>
@@ -18,13 +15,7 @@ function NavBar(): JSX.Element {
           <img src={logo} alt="logo" className={classes.logo} />
           <Typography className={classes.logoText}>LovingSitter.</Typography>
         </Box>
-        {!user ? (
-          <div>
-            <LoggedOutNavBarLinks />
-          </div>
-        ) : (
-          <LoggedInNavBarLinks user={user} />
-        )}
+        <LoggedOutNavBarLinks />
       </Box>
     </AppBar>
   );
