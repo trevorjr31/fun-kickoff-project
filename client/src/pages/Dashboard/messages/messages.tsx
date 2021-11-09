@@ -28,7 +28,7 @@ export default function Messages(): JSX.Element {
     <Grid container component="main">
       <CssBaseline />
       <Grid item>
-        <h2>MESSAGES</h2>
+        <h2>messages</h2>
         <ChatSideBanner loggedInUser={loggedInUser} />
       </Grid>
     </Grid>

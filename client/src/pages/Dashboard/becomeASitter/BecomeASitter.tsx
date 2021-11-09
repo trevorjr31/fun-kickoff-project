@@ -27,7 +27,7 @@ export default function BecomeASitter(): JSX.Element {
     <Grid container component="main">
       <CssBaseline />
       <Grid item>
-        <h2>BECOME A SITTER</h2>
+        <h2>become a sitter</h2>
       </Grid>
     </Grid>
   );

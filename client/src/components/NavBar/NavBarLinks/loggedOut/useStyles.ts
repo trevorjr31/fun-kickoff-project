@@ -15,11 +15,16 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: theme.typography.button.fontWeight,
     fontSize: 12,
     paddingRight: 40,
+    textTransform: 'uppercase',
   },
   containedBtn: {
     margin: theme.spacing(1),
     width: 125,
     height: 45,
+    borderRadius: theme.shape.borderRadius,
+    fontSize: 12,
+    fontWeight: 700,
+    fontFamily: theme.typography.fontFamily,
     textTransform: 'uppercase',
     backgroundColor: theme.palette.primary.main,
     '&:hover': {
@@ -33,6 +38,7 @@ const useStyles = makeStyles((theme) => ({
     height: 45,
     textTransform: 'uppercase',
     fontFamily: theme.typography.fontFamily,
+    textTransform: 'uppercase',
     '&:hover': {
       'background-color': 'rgb(255,0,0,0.5)',
       color: 'rgb(255,255,255)',

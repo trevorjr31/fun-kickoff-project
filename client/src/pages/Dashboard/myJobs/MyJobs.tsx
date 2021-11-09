@@ -27,7 +27,7 @@ export default function MyJobs(): JSX.Element {
     <Grid container component="main">
       <CssBaseline />
       <Grid item>
-        <h2>MY JOBS</h2>
+        <h2>my jobs</h2>
       </Grid>
     </Grid>
   );
