@@ -6,6 +6,7 @@ import * as Yup from 'yup';
 import Typography from '@material-ui/core/Typography';
 import useStyles from './useStyles';
 import { CircularProgress } from '@material-ui/core';
+import { Link } from 'react-router-dom';
 
 interface Props {
   handleSubmit: (
@@ -46,13 +47,17 @@ export default function Login({ handleSubmit }: Props): JSX.Element {
     >
       {({ handleSubmit, handleChange, values, touched, errors, isSubmitting }) => (
         <form onSubmit={handleSubmit} className={classes.form} noValidate>
+          <Typography className={classes.label}>EMAIL ADDRESS</Typography>
           <TextField
+            variant="outlined"
+            className={classes.inputField}
+            placeholder="Your email"
             id="email"
-            label={<Typography className={classes.label}>E-mail address</Typography>}
+            //  label={<Typography className={classes.label}>E-mail address</Typography>}
             fullWidth
             margin="normal"
             InputLabelProps={{
-              shrink: true,
+              disableAnimation: false,
             }}
             InputProps={{
               classes: { input: classes.inputs },
@@ -65,9 +70,13 @@ export default function Login({ handleSubmit }: Props): JSX.Element {
             value={values.email}
             onChange={handleChange}
           />
+          <Typography className={classes.label}>PASSWORD</Typography>
           <TextField
+            className={classes.inputField}
+            variant="outlined"
+            placeholder="Your password"
             id="password"
-            label={<Typography className={classes.label}>Password</Typography>}
+            // label={<Typography className={classes.label}>Password</Typography>}
             fullWidth
             margin="normal"
             InputLabelProps={{
@@ -85,11 +94,25 @@ export default function Login({ handleSubmit }: Props): JSX.Element {
             onChange={handleChange}
           />
           <Box textAlign="center">
-            <Button type="submit" size="large" variant="contained" color="primary" className={classes.submit}>
-              {isSubmitting ? <CircularProgress style={{ color: 'white' }} /> : 'Login'}
+            <Button
+              type="submit"
+              disableElevation={true}
+              size="large"
+              variant="contained"
+              color="primary"
+              className={classes.submit}
+            >
+              {isSubmitting ? <CircularProgress style={{ color: 'white' }} /> : 'LOGIN'}
             </Button>
           </Box>
-          <div style={{ height: 95 }} />
+          <div style={{ height: 95, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+            <Typography className={classes.label}>
+              Don&#39;t have a account yet?
+              <Link className={classes.link} to="/signup">
+                Sign up
+              </Link>
+            </Typography>
+          </div>
         </form>
       )}
     </Formik>

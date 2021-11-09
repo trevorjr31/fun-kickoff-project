@@ -5,13 +5,31 @@ const useStyles = makeStyles((theme) => ({
     width: '100%', // Fix IE 11 issue.
     marginTop: theme.spacing(1),
   },
+  inputField: {
+    '& .MuiOutlinedInput-root': {
+      '& fieldset': {
+        borderColor: 'rgba(0,0,0,0.1)',
+      },
+      '&:hover fieldset': {
+        borderColor: 'rgba(0,0,0,0.5)', // - Set the Input border when parent has :hover
+      },
+      '&.Mui-focused fieldset': {
+        // - Set the Input border when parent is focused
+        borderColor: 'grey',
+      },
+    },
+  },
   label: {
-    fontSize: 19,
-    color: 'rgb(0,0,0,0.4)',
+    fontSize: 11,
+    fontWeight: 800,
+    fontFamily: theme.typography.fontFamily,
     paddingLeft: '5px',
+    marginBottom: -15,
+    marginTop: 10,
   },
   inputs: {
-    marginTop: '.8rem',
+    margin: '.4rem',
+    marginLeft: '.7rem',
     height: '2rem',
     padding: '5px',
   },
@@ -22,13 +40,21 @@ const useStyles = makeStyles((theme) => ({
   submit: {
     margin: theme.spacing(3, 2, 2),
     padding: 10,
-    width: 160,
-    height: 56,
+    width: 170,
+    height: 50,
     borderRadius: theme.shape.borderRadius,
     marginTop: 49,
-    fontSize: 16,
-    backgroundColor: '#3a8dff',
-    fontWeight: 'bold',
+    fontSize: 14,
+    backgroundColor: theme.palette.primary.main,
+    fontWeight: 500,
+    fontFamily: theme.typography.fontFamily,
+    '&:hover': {
+      'background-color': 'rgba(255,0,0,0.5)',
+    },
+  },
+  link: {
+    color: 'red',
+    marginLeft: 3,
   },
 }));
 

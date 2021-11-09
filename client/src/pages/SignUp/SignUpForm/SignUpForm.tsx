@@ -6,6 +6,7 @@ import * as Yup from 'yup';
 import Typography from '@material-ui/core/Typography';
 import useStyles from './useStyles';
 import { CircularProgress } from '@material-ui/core';
+import { Link } from 'react-router-dom';
 
 interface Props {
   handleSubmit: (
@@ -51,46 +52,56 @@ const SignUpForm = ({ handleSubmit }: Props): JSX.Element => {
     >
       {({ handleSubmit, handleChange, values, touched, errors, isSubmitting }) => (
         <form onSubmit={handleSubmit} className={classes.form} noValidate>
+          <Typography className={classes.label}>EMAIL ADDRESS</Typography>
           <TextField
-            id="username"
-            label={<Typography className={classes.label}>Username</Typography>}
-            fullWidth
-            margin="normal"
-            InputLabelProps={{
-              shrink: true,
-            }}
-            InputProps={{
-              classes: { input: classes.inputs },
-            }}
-            name="username"
-            autoComplete="username"
-            autoFocus
-            helperText={touched.username ? errors.username : ''}
-            error={touched.username && Boolean(errors.username)}
-            value={values.username}
-            onChange={handleChange}
-          />
-          <TextField
+            variant="outlined"
+            className={classes.inputField}
+            placeholder="Your email"
             id="email"
-            label={<Typography className={classes.label}>E-mail address</Typography>}
             fullWidth
             margin="normal"
             InputLabelProps={{
-              shrink: true,
+              disableAnimation: false,
             }}
             InputProps={{
               classes: { input: classes.inputs },
             }}
             name="email"
             autoComplete="email"
+            autoFocus
             helperText={touched.email ? errors.email : ''}
             error={touched.email && Boolean(errors.email)}
             value={values.email}
             onChange={handleChange}
           />
+          <Typography className={classes.label}>NAME</Typography>
           <TextField
+            variant="outlined"
+            className={classes.inputField}
+            placeholder="Your name"
+            id="name"
+            fullWidth
+            margin="normal"
+            InputLabelProps={{
+              disableAnimation: false,
+            }}
+            InputProps={{
+              classes: { input: classes.inputs },
+            }}
+            name="name"
+            autoComplete="name"
+            autoFocus
+            helperText={touched.username ? errors.username : ''}
+            error={touched.username && Boolean(errors.username)}
+            value={values.username}
+            onChange={handleChange}
+          />
+          <Typography className={classes.label}>PASSWORD</Typography>
+          <TextField
+            className={classes.inputField}
+            variant="outlined"
+            placeholder="Create a password"
             id="password"
-            label={<Typography className={classes.label}>Password</Typography>}
             fullWidth
             margin="normal"
             InputLabelProps={{
@@ -106,16 +117,29 @@ const SignUpForm = ({ handleSubmit }: Props): JSX.Element => {
             value={values.password}
             onChange={handleChange}
           />
-
           <Box textAlign="center">
-            <Button type="submit" size="large" variant="contained" color="primary" className={classes.submit}>
-              {isSubmitting ? <CircularProgress style={{ color: 'white' }} /> : 'Create'}
+            <Button
+              type="submit"
+              disableElevation={true}
+              size="large"
+              variant="contained"
+              color="primary"
+              className={classes.submit}
+            >
+              {isSubmitting ? <CircularProgress style={{ color: 'white' }} /> : 'SIGN UP'}
             </Button>
           </Box>
+          <div style={{ height: 95, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+            <Typography className={classes.label}>
+              Already a member?
+              <Link className={classes.link} to="/login">
+                Login
+              </Link>
+            </Typography>
+          </div>
         </form>
       )}
     </Formik>
   );
 };
-
 export default SignUpForm;
