@@ -25,7 +25,13 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: theme.typography.button.fontWeight,
     fontSize: 12,
     fontFamily: theme.typography.fontFamily,
-    paddingRight: 40,
+    marginLeft: 40,
+    marginRight: theme.spacing(1),
+  },
+  dot: {
+    '& .MuiBadge-badge': {
+      backgroundColor: '#66bb6a',
+    },
   },
 }));
 

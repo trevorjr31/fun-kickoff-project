@@ -32,7 +32,7 @@ const AuthMenu = ({ user }: Props): JSX.Element => {
   };
 
   return (
-    <div>
+    <div className={classes.root}>
       <IconButton aria-label="show auth menu" aria-controls="auth-menu" aria-haspopup="true" onClick={handleClick}>
         <AvatarDisplay loggedIn user={user} />
       </IconButton>
