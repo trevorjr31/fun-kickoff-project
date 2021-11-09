@@ -27,7 +27,7 @@ export default function Dashboard(): JSX.Element {
     <Grid container component="main">
       <CssBaseline />
       <Grid item>
-        <h1>MAIN DASHBOARD</h1>
+        <h1>main dashboard</h1>
       </Grid>
     </Grid>
   );
