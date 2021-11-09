@@ -78,8 +78,8 @@ const SignUpForm = ({ handleSubmit }: Props): JSX.Element => {
           <TextField
             variant="outlined"
             className={classes.inputField}
-            placeholder="Your username"
-            id="username"
+            placeholder="Your name"
+            id="name"
             fullWidth
             margin="normal"
             InputLabelProps={{
@@ -88,8 +88,8 @@ const SignUpForm = ({ handleSubmit }: Props): JSX.Element => {
             InputProps={{
               classes: { input: classes.inputs },
             }}
-            name="username"
-            autoComplete="username"
+            name="name"
+            autoComplete="name"
             autoFocus
             helperText={touched.username ? errors.username : ''}
             error={touched.username && Boolean(errors.username)}

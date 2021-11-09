@@ -11,14 +11,12 @@ const useStyles = makeStyles((theme) => ({
         borderColor: 'rgba(0,0,0,0.1)',
       },
       '&:hover fieldset': {
-        borderColor: 'rgba(0,0,0,0.5)',
+        borderColor: 'rgba(0,0,0,0.5)', // - Set the Input border when parent has :hover
       },
       '&.Mui-focused fieldset': {
+        // - Set the Input border when parent is focused
         borderColor: 'grey',
       },
-    },
-    '& ::placeholder': {
-      fontFamily: theme.typography.fontFamily,
     },
   },
   label: {
@@ -26,10 +24,12 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 800,
     fontFamily: theme.typography.fontFamily,
     paddingLeft: '5px',
-    margin: theme.spacing(2, 5, -2, 0),
+    marginBottom: -15,
+    marginTop: 10,
   },
   inputs: {
-    marginLeft: theme.spacing(1),
+    margin: '.4rem',
+    marginLeft: '.7rem',
     height: '2rem',
     padding: '5px',
   },
