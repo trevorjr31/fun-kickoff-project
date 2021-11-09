@@ -15,15 +15,9 @@ function LoggedInNavBarLinks({ user }: Props): JSX.Element {
     <Toolbar>
       <CssBaseline />
       <Box className={classes.btnWrapper}>
-        <Typography component={Link} to="/becomeasitter" className={classes.textlink}>
-          become a sitter
-        </Typography>
-        <Typography component={Link} to="/dashboard" className={classes.navlink}>
-          Dashboard
-        </Typography>
         <Typography className={classes.navlink}>Notifications</Typography>
         <Typography component={Link} to="/mysitters" className={classes.navlink}>
-          My Sitters
+          My Jobs
         </Typography>
         <Typography component={Link} to="/messages" className={classes.navlink}>
           Messages

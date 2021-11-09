@@ -48,14 +48,8 @@ const AuthMenu = ({ user }: Props): JSX.Element => {
         }}
         getContentAnchorEl={null}
       >
-        <MenuItem component={Link} onClick={handleClose} className={classes.becomeASitterLink} to="/becomeasitter">
-          become a sitter
-        </MenuItem>
-        <MenuItem component={Link} onClick={handleClose} className={classes.smallScreenItem} to="/dashboard">
-          Dashboard
-        </MenuItem>
         <MenuItem component={Link} onClick={handleClose} className={classes.smallScreenItem} to="/mysitters">
-          My Sitters
+          My Jobs
         </MenuItem>
         <MenuItem component={Link} onClick={handleClose} className={classes.smallScreenItem} to="/messages">
           Messages

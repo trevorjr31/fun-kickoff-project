@@ -7,6 +7,9 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   becomeASitterLink: {
+    [theme.breakpoints.up('md')]: {
+      display: 'none',
+    },
     textTransform: 'uppercase',
   },
 }));

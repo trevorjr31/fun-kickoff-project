@@ -5,6 +5,8 @@ import LoggedOutNavBarLinks from './NavBarLinks/loggedOut/NavBarLinks';
 import useStyles from './useStyles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { useAuth } from '../../context/useAuthContext';
+import { Link } from 'react-router-dom';
+import IconButton from '@material-ui/core/IconButton';
 
 function NavBar(): JSX.Element {
   const classes = useStyles();
@@ -15,7 +17,13 @@ function NavBar(): JSX.Element {
       <CssBaseline />
       <Box className={classes.navWrapper}>
         <Box className={classes.logoWrapper}>
-          <img src={logo} alt="logo" className={classes.logo} />
+          {!user ? (
+            <img src={logo} alt="logo" className={classes.logo} />
+          ) : (
+            <Link to="/dashboard">
+              <img src={logo} alt="logo" className={classes.logo} />
+            </Link>
+          )}
           <Typography className={classes.logoText}>LovingSitter.</Typography>
         </Box>
         {!user ? (
