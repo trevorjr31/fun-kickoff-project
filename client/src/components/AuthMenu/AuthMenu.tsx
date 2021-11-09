@@ -2,13 +2,21 @@ import { useState, MouseEvent } from 'react';
 import IconButton from '@material-ui/core/IconButton';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
-import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
 import { useAuth } from '../../context/useAuthContext';
+import { User } from '../../interface/User';
+import AvatarDisplay from '../AvatarDisplay/AvatarDisplay';
+import { Link } from 'react-router-dom';
+import useStyles from './useStyles';
 
-const AuthMenu = (): JSX.Element => {
+interface Props {
+  user: User;
+}
+
+const AuthMenu = ({ user }: Props): JSX.Element => {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
   const { logout } = useAuth();
+  const classes = useStyles();
 
   const handleClick = (event: MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
@@ -26,7 +34,7 @@ const AuthMenu = (): JSX.Element => {
   return (
     <div>
       <IconButton aria-label="show auth menu" aria-controls="auth-menu" aria-haspopup="true" onClick={handleClick}>
-        <MoreHorizIcon />
+        <AvatarDisplay loggedIn user={user} />
       </IconButton>
       <Menu
         id="auth-menu"
@@ -40,6 +48,21 @@ const AuthMenu = (): JSX.Element => {
         }}
         getContentAnchorEl={null}
       >
+        <MenuItem component={Link} onClick={handleClose} className={classes.smallScreenItem} to="/becomeasitter">
+          BECOME A SITTER
+        </MenuItem>
+        <MenuItem component={Link} onClick={handleClose} className={classes.smallScreenItem} to="/dashboard">
+          Dashboard
+        </MenuItem>
+        <MenuItem component={Link} onClick={handleClose} className={classes.smallScreenItem} to="/mysitters">
+          My Sitters
+        </MenuItem>
+        <MenuItem component={Link} onClick={handleClose} className={classes.smallScreenItem} to="/messages">
+          Messages
+        </MenuItem>
+        <MenuItem component={Link} onClick={handleClose} to="/profile">
+          Profile
+        </MenuItem>
         <MenuItem onClick={handleLogout}>Logout</MenuItem>
       </Menu>
     </div>

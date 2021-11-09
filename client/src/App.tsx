@@ -8,6 +8,11 @@ import NavBar from './components/NavBar/NavBar';
 import { AuthProvider } from './context/useAuthContext';
 import { SocketProvider } from './context/useSocketContext';
 import { SnackBarProvider } from './context/useSnackbarContext';
+import BecomeASitter from './pages/Dashboard/becomeASitter/BecomeASitter';
+import Messages from './pages/Dashboard/messages/messages';
+import MySitters from './pages/Dashboard/mySitters/MySitters';
+import Profile from './pages/Dashboard/profile/Profile';
+import MyJobs from './pages/Dashboard/myJobs/MyJobs';
 
 import './App.css';
 
@@ -25,6 +30,11 @@ function App(): JSX.Element {
                 <Route exact path="/dashboard">
                   <Dashboard />
                 </Route>
+                <Route component={BecomeASitter} exact path="/becomeasitter" />
+                <Route component={MySitters} exact path="/mysitters" />
+                <Route component={MyJobs} exact path="/myjobs" />
+                <Route component={Messages} exact path="/messages" />
+                <Route component={Profile} exact path="/profile" />
                 <Route path="*">
                   <Redirect to="/login" />
                 </Route>
