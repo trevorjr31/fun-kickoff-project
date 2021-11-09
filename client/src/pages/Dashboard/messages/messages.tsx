@@ -1,12 +1,13 @@
 import Grid from '@material-ui/core/Grid';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import CircularProgress from '@material-ui/core/CircularProgress';
-import { useAuth } from '../../context/useAuthContext';
-import { useSocket } from '../../context/useSocketContext';
+import { useAuth } from '../../../context/useAuthContext';
+import { useSocket } from '../../../context/useSocketContext';
 import { useHistory } from 'react-router-dom';
+import ChatSideBanner from '../../../components/ChatSideBanner/ChatSideBanner';
 import { useEffect } from 'react';
 
-export default function Dashboard(): JSX.Element {
+export default function Messages(): JSX.Element {
   const { loggedInUser } = useAuth();
   const { initSocket } = useSocket();
 
@@ -27,7 +28,8 @@ export default function Dashboard(): JSX.Element {
     <Grid container component="main">
       <CssBaseline />
       <Grid item>
-        <h1>MAIN DASHBOARD</h1>
+        <h2>MESSAGES</h2>
+        <ChatSideBanner loggedInUser={loggedInUser} />
       </Grid>
     </Grid>
   );

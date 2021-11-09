@@ -12,13 +12,13 @@ function LoggedOutNavBarLinks(): JSX.Element {
       <CssBaseline />
       <Box className={classes.btnWrapper}>
         <Typography component={Link} to="/signup" className={classes.textlink}>
-          become a sitter
+          BECOME A SITTER
         </Typography>
         <Button component={Link} to="/login" variant="outlined" color="primary" className={classes.outlinedBtn}>
-          login
+          LOGIN
         </Button>
         <Button component={Link} to="/signup" variant="contained" color="primary" className={classes.containedBtn}>
-          sign up
+          SIGN UP
         </Button>
       </Box>
       <NavBarMenu />

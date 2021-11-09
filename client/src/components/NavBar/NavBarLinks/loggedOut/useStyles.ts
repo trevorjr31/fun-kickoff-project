@@ -17,7 +17,6 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 12,
     fontFamily: theme.typography.fontFamily,
     paddingRight: 40,
-    textTransform: 'uppercase',
   },
   containedBtn: {
     color: 'white',
@@ -29,7 +28,6 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: theme.shape.borderRadius,
     fontSize: 12,
     fontWeight: 700,
-    textTransform: 'uppercase',
     fontFamily: theme.typography.fontFamily,
     backgroundColor: theme.palette.primary.main,
     '&:hover': {
@@ -46,7 +44,6 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: theme.shape.borderRadius,
     fontSize: 12,
     fontWeight: 700,
-    textTransform: 'uppercase',
     fontFamily: theme.typography.fontFamily,
     '&:hover': {
       'background-color': 'rgb(255,0,0,0.5)',

@@ -52,7 +52,7 @@ const SignUpForm = ({ handleSubmit }: Props): JSX.Element => {
     >
       {({ handleSubmit, handleChange, values, touched, errors, isSubmitting }) => (
         <form onSubmit={handleSubmit} className={classes.form} noValidate>
-          <Typography className={classes.label}>email address</Typography>
+          <Typography className={classes.label}>EMAIL ADDRESS</Typography>
           <TextField
             variant="outlined"
             className={classes.inputField}
@@ -74,7 +74,7 @@ const SignUpForm = ({ handleSubmit }: Props): JSX.Element => {
             value={values.email}
             onChange={handleChange}
           />
-          <Typography className={classes.label}>name</Typography>
+          <Typography className={classes.label}>NAME</Typography>
           <TextField
             variant="outlined"
             className={classes.inputField}
@@ -96,7 +96,7 @@ const SignUpForm = ({ handleSubmit }: Props): JSX.Element => {
             value={values.username}
             onChange={handleChange}
           />
-          <Typography className={classes.label}>password</Typography>
+          <Typography className={classes.label}>PASSWORD</Typography>
           <TextField
             className={classes.inputField}
             variant="outlined"
