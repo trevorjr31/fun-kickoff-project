@@ -11,11 +11,13 @@ const useStyles = makeStyles((theme) => ({
         borderColor: 'rgba(0,0,0,0.1)',
       },
       '&:hover fieldset': {
-        borderColor: 'rgba(0,0,0,0.5)', // - Set the Input border when parent has :hover
+        borderColor: 'rgba(0,0,0,0.5)',
       },
       '&.Mui-focused fieldset': {
-        // - Set the Input border when parent is focused
         borderColor: 'grey',
+      },
+      '& ::placeholder': {
+        fontFamily: theme.typography.fontFamily,
       },
     },
   },
@@ -24,12 +26,10 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: theme.typography.button.fontWeight,
     fontFamily: theme.typography.fontFamily,
     paddingLeft: '5px',
-    marginBottom: -15,
-    marginTop: 10,
+    margin: theme.spacing(2, 5, -2, 0),
   },
   inputs: {
-    margin: '.4rem',
-    marginLeft: '.7rem',
+    marginLeft: theme.spacing(1),
     height: '2rem',
     padding: '5px',
   },
@@ -38,12 +38,11 @@ const useStyles = makeStyles((theme) => ({
     color: '#3a8dff',
   },
   submit: {
-    margin: theme.spacing(3, 2, 2),
+    margin: theme.spacing(5, 1, 1),
     padding: 10,
     width: 170,
     height: 50,
     borderRadius: theme.shape.borderRadius,
-    marginTop: 49,
     fontSize: 14,
     backgroundColor: theme.palette.primary.main,
     fontWeight: 500,
