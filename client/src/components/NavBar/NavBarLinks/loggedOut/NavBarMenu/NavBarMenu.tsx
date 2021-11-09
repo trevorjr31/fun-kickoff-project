@@ -37,17 +37,17 @@ export default function NavBarMenu(): JSX.Element {
       >
         <MenuItem onClick={handleClose}>
           <Link to="/signup" className={classes.link} onClick={handleClose}>
-            <Typography className={classes.textlink}>BECOME A SITTER</Typography>
+            <Typography className={classes.textlink}>become a sitter</Typography>
           </Link>
         </MenuItem>
         <MenuItem>
           <Link to="/login" className={classes.link} onClick={handleClose}>
-            <Typography className={classes.textlink}>LOGIN</Typography>
+            <Typography className={classes.textlink}>login</Typography>
           </Link>
         </MenuItem>
         <MenuItem onClick={handleClose}>
           <Link to="/signup" className={classes.link} onClick={handleClose}>
-            <Typography className={classes.textlink}>SIGNUP</Typography>
+            <Typography className={classes.textlink}>signup</Typography>
           </Link>
         </MenuItem>
       </Menu>

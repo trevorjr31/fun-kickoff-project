@@ -47,7 +47,7 @@ export default function Login({ handleSubmit }: Props): JSX.Element {
     >
       {({ handleSubmit, handleChange, values, touched, errors, isSubmitting }) => (
         <form onSubmit={handleSubmit} className={classes.form} noValidate>
-          <Typography className={classes.label}>EMAIL ADDRESS</Typography>
+          <Typography className={classes.label}>email address</Typography>
           <TextField
             variant="outlined"
             className={classes.inputField}
@@ -69,7 +69,7 @@ export default function Login({ handleSubmit }: Props): JSX.Element {
             value={values.email}
             onChange={handleChange}
           />
-          <Typography className={classes.label}>PASSWORD</Typography>
+          <Typography className={classes.label}>password</Typography>
           <TextField
             className={classes.inputField}
             variant="outlined"
