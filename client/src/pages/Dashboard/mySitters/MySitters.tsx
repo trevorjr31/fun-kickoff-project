@@ -27,7 +27,7 @@ export default function MySitters(): JSX.Element {
     <Grid container component="main">
       <CssBaseline />
       <Grid item>
-        <h2>my sitter</h2>
+        <h2>my jobs</h2>
       </Grid>
     </Grid>
   );
