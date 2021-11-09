@@ -1,9 +1,9 @@
 import { AppBar, Box } from '@material-ui/core';
 import logo from '../../Images/logo.png';
-import NavBarLinks from './NavBarLinks/NavBarLinks';
+import LoggedOutNavBarLinks from './NavBarLinks/loggedOut/NavBarLinks';
 import useStyles from './useStyles';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import NavBarMenu from './NavBarMenu/NavBarMenu';
+import NavBarMenu from './NavBarLinks/loggedOut/NavBarMenu/NavBarMenu';
 
 function NavBar(): JSX.Element {
   const classes = useStyles();
@@ -13,7 +13,7 @@ function NavBar(): JSX.Element {
       <CssBaseline />
       <Box className={classes.navWrapper}>
         <img src={logo} alt="logo" className={classes.logo} />
-        <NavBarLinks />
+        <LoggedOutNavBarLinks />
         <NavBarMenu />
       </Box>
     </AppBar>
