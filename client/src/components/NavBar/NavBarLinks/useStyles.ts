@@ -1,14 +1,20 @@
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
-  btnWrapper: {
+  root: {
     [theme.breakpoints.down('sm')]: {
       display: 'none',
     },
+  },
+  btnWrapper: {
     display: 'flex',
     alignItems: 'center',
-    maxWidth: 500,
   },
+  txtBtn: {
+    color: 'rgb(0,0,0)',
+  },
+  link: { textDecoration: 'none', marginLeft: '-35px' },
+
   textlink: {
     textDecoration: 'underline',
     color: 'rgb(0,0,0)',
@@ -21,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
   containedBtn: {
     color: 'white',
     background: 'red',
-    margin: theme.spacing(1),
+    margin: theme.spacing(3),
     padding: 10,
     width: 125,
     height: 45,
@@ -37,7 +43,7 @@ const useStyles = makeStyles((theme) => ({
   outlinedBtn: {
     color: 'red',
     border: 'solid 1px red',
-    margin: theme.spacing(1),
+    margin: theme.spacing(3),
     padding: 10,
     width: 125,
     height: 45,

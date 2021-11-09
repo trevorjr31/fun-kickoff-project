@@ -1,5 +1,5 @@
 import React from 'react';
-import { Typography, Button, Box, MenuItem, Menu } from '@material-ui/core';
+import { Typography, Button, Box, MenuItem, Drawer } from '@material-ui/core';
 import useStyles from './useStyles';
 import { Link } from 'react-router-dom';
 
@@ -26,15 +26,7 @@ export default function NavBarMenu(): JSX.Element {
       >
         ☰
       </Button>
-      <Menu
-        id="basic-menu"
-        anchorEl={anchorEl}
-        open={open}
-        onClose={handleClose}
-        MenuListProps={{
-          'aria-labelledby': 'basic-button',
-        }}
-      >
+      <Drawer anchor="right" open={open}>
         <MenuItem onClick={handleClose}>
           <Link to="/signup" className={classes.link} onClick={handleClose}>
             <Typography className={classes.textlink}>BECOME A SITTER</Typography>
@@ -50,7 +42,7 @@ export default function NavBarMenu(): JSX.Element {
             <Typography className={classes.textlink}>SIGNUP</Typography>
           </Link>
         </MenuItem>
-      </Menu>
+      </Drawer>
     </Box>
   );
 }
