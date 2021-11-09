@@ -34,7 +34,7 @@ export const AuthProvider: FunctionComponent = ({ children }): JSX.Element => {
     // needed to remove token cookie
     await logoutAPI()
       .then(() => {
-        history.push('/');
+        history.push('/login');
         setLoggedInUser(null);
       })
       .catch((error) => console.error(error));
@@ -49,8 +49,8 @@ export const AuthProvider: FunctionComponent = ({ children }): JSX.Element => {
           history.push('/dashboard');
         } else {
           // don't need to provide error feedback as this just means user doesn't have saved cookies or the cookies have not been authenticated on the backend
-          // setLoggedInUser(null);
-          //history.push('/');
+          setLoggedInUser(null);
+          history.push('/login');
         }
       });
     };
