@@ -15,7 +15,6 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: theme.typography.button.fontWeight,
     fontSize: 12,
     paddingRight: 40,
-    textTransform: 'uppercase',
   },
   containedBtn: {
     margin: theme.spacing(1),

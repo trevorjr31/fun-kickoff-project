@@ -11,7 +11,6 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: theme.typography.fontFamily,
     paddingLeft: '5px',
     margin: theme.spacing(2, 5, -2, 0),
-    textTransform: 'uppercase',
   },
   inputs: {
     marginLeft: theme.spacing(1),
