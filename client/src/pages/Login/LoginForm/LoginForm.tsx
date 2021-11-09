@@ -53,7 +53,6 @@ export default function Login({ handleSubmit }: Props): JSX.Element {
             className={classes.inputField}
             placeholder="Your email"
             id="email"
-            //  label={<Typography className={classes.label}>E-mail address</Typography>}
             fullWidth
             margin="normal"
             InputLabelProps={{
@@ -76,7 +75,6 @@ export default function Login({ handleSubmit }: Props): JSX.Element {
             variant="outlined"
             placeholder="Your password"
             id="password"
-            // label={<Typography className={classes.label}>Password</Typography>}
             fullWidth
             margin="normal"
             InputLabelProps={{
@@ -107,7 +105,7 @@ export default function Login({ handleSubmit }: Props): JSX.Element {
           </Box>
           <div style={{ height: 95, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
             <Typography className={classes.label}>
-              Don&#39;t have a account yet?
+              Don&#39;t have an account yet?
               <Link className={classes.link} to="/signup">
                 Sign up
               </Link>
