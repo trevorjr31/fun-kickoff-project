@@ -11,18 +11,6 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: theme.spacing(3),
     margin: 29,
   },
-  logoText: {
-    fontFamily: theme.typography.fontFamily,
-    marginTop: 29,
-    marginLeft: theme.spacing(-1),
-    fontWeight: 700,
-    fontSize: 28,
-  },
-  logoWrapper: {
-    maxWidth: '300px',
-    display: 'flex',
-    justifyContent: 'space-around',
-  },
   navWrapper: {
     display: 'inline-flex',
     alignItems: 'center',
