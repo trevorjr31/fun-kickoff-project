@@ -17,6 +17,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 12,
     fontFamily: theme.typography.fontFamily,
     paddingRight: 40,
+    textTransform: 'uppercase',
   },
   navlink: {
     textDecoration: 'none',

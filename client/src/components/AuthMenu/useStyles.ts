@@ -6,6 +6,9 @@ const useStyles = makeStyles((theme) => ({
       display: 'none',
     },
   },
+  becomeASitterLink: {
+    textTransform: 'uppercase',
+  },
 }));
 
 export default useStyles;

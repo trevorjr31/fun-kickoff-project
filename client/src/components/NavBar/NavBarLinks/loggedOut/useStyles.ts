@@ -17,6 +17,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 12,
     fontFamily: theme.typography.fontFamily,
     paddingRight: 40,
+    textTransform: 'uppercase',
   },
   containedBtn: {
     color: 'white',
@@ -29,6 +30,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 12,
     fontWeight: 700,
     fontFamily: theme.typography.fontFamily,
+    textTransform: 'uppercase',
     backgroundColor: theme.palette.primary.main,
     '&:hover': {
       'background-color': 'rgba(255,0,0,0.5)',
@@ -45,6 +47,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 12,
     fontWeight: 700,
     fontFamily: theme.typography.fontFamily,
+    textTransform: 'uppercase',
     '&:hover': {
       'background-color': 'rgb(255,0,0,0.5)',
       color: 'rgb(255,255,255)',
