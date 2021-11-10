@@ -6,6 +6,7 @@ import NavBarLinksWrapper from './NavBarLinks/NavBarLinksWrapper/NavBarLinksWrap
 
 function NavBar(): JSX.Element {
   const classes = useStyles();
+  const user = useAuth().loggedInUser;
 
   return (
     <AppBar color="transparent" position="static" className={classes.root} elevation={0}>
