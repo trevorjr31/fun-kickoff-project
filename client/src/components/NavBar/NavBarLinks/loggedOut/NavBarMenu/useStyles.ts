@@ -28,7 +28,6 @@ const useStyles = makeStyles((theme) => ({
     alignSelf: 'center',
     fontWeight: 'bold',
     fontSize: 26,
-    fontFamily: theme.typography.fontFamily,
   },
 }));
 

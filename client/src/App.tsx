@@ -13,6 +13,7 @@ import Messages from './pages/Dashboard/messages/messages';
 import MySitters from './pages/Dashboard/mySitters/MySitters';
 import Profile from './pages/Dashboard/profile/Profile';
 import MyJobs from './pages/Dashboard/myJobs/MyJobs';
+import { CssBaseline } from '@material-ui/core';
 
 import './App.css';
 
@@ -31,9 +32,9 @@ function App(): JSX.Element {
                 <Route exact path="/dashboard">
                   <Dashboard />
                 </Route>
-                <Route component={BecomeASitter} exact path="/becomeasitter" />
-                <Route component={MySitters} exact path="/mysitters" />
-                <Route component={MyJobs} exact path="/myjobs" />
+                <Route component={BecomeASitter} exact path="/become-a-sitter" />
+                <Route component={MySitters} exact path="/my-sitters" />
+                <Route component={MyJobs} exact path="/my-jobs" />
                 <Route component={Messages} exact path="/messages" />
                 <Route component={Profile} exact path="/profile" />
                 <Route path="*">

@@ -1,6 +1,5 @@
 import { Toolbar, Box, Typography, Badge } from '@material-ui/core';
 import useStyles from './useStyles';
-import CssBaseline from '@material-ui/core/CssBaseline';
 import { Link } from 'react-router-dom';
 import { User } from '../../../../interface/User';
 import AuthMenu from '../../../AuthMenu/AuthMenu';
@@ -13,13 +12,12 @@ function LoggedInNavBarLinks({ user }: Props): JSX.Element {
   const classes = useStyles();
   return (
     <Toolbar>
-      <CssBaseline />
       <Box className={classes.btnWrapper}>
         <Typography className={classes.navlink}>Notifications</Typography>
-        <Typography component={Link} to="/mysitters" className={classes.navlink}>
+        <Typography component={Link} to="/my-sitters" className={classes.navlink}>
           My Jobs
         </Typography>
-        <Badge variant="dot" className={classes.dot}>
+        <Badge variant="dot" color="secondary">
           <Typography component={Link} to="/messages" className={classes.navlink}>
             Messages
           </Typography>

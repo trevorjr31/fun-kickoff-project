@@ -1,5 +1,4 @@
 import Grid from '@material-ui/core/Grid';
-import CssBaseline from '@material-ui/core/CssBaseline';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import { useAuth } from '../../../context/useAuthContext';
 import { useSocket } from '../../../context/useSocketContext';
@@ -25,7 +24,6 @@ export default function Profile(): JSX.Element {
 
   return (
     <Grid container component="main">
-      <CssBaseline />
       <Grid item>
         <h2>Profile</h2>
       </Grid>

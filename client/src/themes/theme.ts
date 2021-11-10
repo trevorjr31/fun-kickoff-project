@@ -11,6 +11,7 @@ export const theme = createMuiTheme({
   },
   palette: {
     primary: { main: '#F04040' },
+    secondary: { main: '#1ec311' },
   },
   shape: {
     borderRadius: 5,
@@ -27,9 +28,6 @@ export const theme = createMuiTheme({
         },
         '&$focused $notchedOutline': {
           borderColor: 'grey',
-        },
-        '&::placeholder': {
-          fontFamily: '"Poppins", "sans-serif", "Roboto"',
         },
       },
     },

@@ -12,7 +12,6 @@ const useStyles = makeStyles((theme) => ({
     margin: 29,
   },
   logoText: {
-    fontFamily: theme.typography.fontFamily,
     marginTop: 29,
     marginLeft: theme.spacing(-1),
     fontWeight: 700,

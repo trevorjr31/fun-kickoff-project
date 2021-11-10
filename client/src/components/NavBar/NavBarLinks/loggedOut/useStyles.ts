@@ -24,7 +24,6 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: theme.shape.borderRadius,
     fontSize: 12,
     fontWeight: 700,
-    fontFamily: theme.typography.fontFamily,
     textTransform: 'uppercase',
     backgroundColor: theme.palette.primary.main,
     '&:hover': {
@@ -36,8 +35,6 @@ const useStyles = makeStyles((theme) => ({
     margin: theme.spacing(1),
     width: 125,
     height: 45,
-    textTransform: 'uppercase',
-    fontFamily: theme.typography.fontFamily,
     textTransform: 'uppercase',
     '&:hover': {
       'background-color': 'rgb(255,0,0,0.5)',

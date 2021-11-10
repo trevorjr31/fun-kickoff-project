@@ -8,7 +8,6 @@ const useStyles = makeStyles((theme) => ({
   label: {
     fontSize: 11,
     fontWeight: theme.typography.button.fontWeight,
-    fontFamily: theme.typography.fontFamily,
     paddingLeft: '5px',
     margin: theme.spacing(2, 5, -2, 0),
     textTransform: 'uppercase',
