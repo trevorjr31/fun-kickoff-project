@@ -8,6 +8,7 @@ import NavBar from './components/NavBar/NavBar';
 import { AuthProvider } from './context/useAuthContext';
 import { SocketProvider } from './context/useSocketContext';
 import { SnackBarProvider } from './context/useSnackbarContext';
+import CssBaseline from '@material-ui/core/CssBaseline';
 
 import './App.css';
 

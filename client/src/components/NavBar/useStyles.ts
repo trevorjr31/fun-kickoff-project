@@ -18,16 +18,6 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 700,
     fontSize: 28,
   },
-  logoWrapper: {
-    maxWidth: '300px',
-    display: 'flex',
-    justifyContent: 'space-around',
-  },
-  navWrapper: {
-    display: 'inline-flex',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-  },
 }));
 
 export default useStyles;

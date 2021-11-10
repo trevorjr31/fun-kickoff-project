@@ -50,7 +50,6 @@ export default function Login({ handleSubmit }: Props): JSX.Element {
           <Typography className={classes.label}>email address</Typography>
           <TextField
             variant="outlined"
-            className={classes.inputField}
             placeholder="Your email"
             id="email"
             fullWidth
@@ -71,7 +70,6 @@ export default function Login({ handleSubmit }: Props): JSX.Element {
           />
           <Typography className={classes.label}>password</Typography>
           <TextField
-            className={classes.inputField}
             variant="outlined"
             placeholder="Your password"
             id="password"
