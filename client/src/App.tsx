@@ -13,7 +13,7 @@ import Messages from './pages/Dashboard/messages/messages';
 import MySitters from './pages/Dashboard/mySitters/MySitters';
 import Profile from './pages/Dashboard/profile/Profile';
 import MyJobs from './pages/Dashboard/myJobs/MyJobs';
-
+import { CssBaseline } from '@material-ui/core';
 import './App.css';
 
 function App(): JSX.Element {
