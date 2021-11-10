@@ -55,7 +55,6 @@ const SignUpForm = ({ handleSubmit }: Props): JSX.Element => {
           <Typography className={classes.label}>email address</Typography>
           <TextField
             variant="outlined"
-            className={classes.inputField}
             placeholder="Your email"
             id="email"
             fullWidth
@@ -77,7 +76,6 @@ const SignUpForm = ({ handleSubmit }: Props): JSX.Element => {
           <Typography className={classes.label}>name</Typography>
           <TextField
             variant="outlined"
-            className={classes.inputField}
             placeholder="Your username"
             id="username"
             fullWidth
@@ -98,7 +96,6 @@ const SignUpForm = ({ handleSubmit }: Props): JSX.Element => {
           />
           <Typography className={classes.label}>password</Typography>
           <TextField
-            className={classes.inputField}
             variant="outlined"
             placeholder="Create a password"
             id="password"

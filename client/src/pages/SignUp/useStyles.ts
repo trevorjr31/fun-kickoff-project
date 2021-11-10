@@ -10,7 +10,6 @@ const useStyles = makeStyles(() => ({
   authWrapper: {
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'space-between',
     flexDirection: 'column',
     paddingTop: 25,
     boxShadow: '1px 1px 20px rgb(0,0,0,0.1)',

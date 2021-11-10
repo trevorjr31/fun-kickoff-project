@@ -1,6 +1,5 @@
 import { Toolbar, Box, Button, Typography } from '@material-ui/core';
 import useStyles from './useStyles';
-import CssBaseline from '@material-ui/core/CssBaseline';
 import { Link } from 'react-router-dom';
 import NavBarMenu from './NavBarMenu/NavBarMenu';
 
@@ -9,7 +8,6 @@ function LoggedOutNavBarLinks(): JSX.Element {
 
   return (
     <Toolbar>
-      <CssBaseline />
       <Box className={classes.btnWrapper}>
         <Typography component={Link} to="/signup" className={classes.textlink}>
           become a sitter

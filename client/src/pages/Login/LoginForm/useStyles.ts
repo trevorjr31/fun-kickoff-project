@@ -5,22 +5,6 @@ const useStyles = makeStyles((theme) => ({
     width: '100%', // Fix IE 11 issue.
     marginTop: theme.spacing(1),
   },
-  inputField: {
-    '& .MuiOutlinedInput-root': {
-      '& fieldset': {
-        borderColor: 'rgba(0,0,0,0.1)',
-      },
-      '&:hover fieldset': {
-        borderColor: 'rgba(0,0,0,0.5)',
-      },
-      '&.Mui-focused fieldset': {
-        borderColor: 'grey',
-      },
-    },
-    '& ::placeholder': {
-      fontFamily: theme.typography.fontFamily,
-    },
-  },
   label: {
     fontSize: 11,
     fontWeight: 800,
@@ -40,18 +24,11 @@ const useStyles = makeStyles((theme) => ({
   },
   submit: {
     margin: theme.spacing(3, 2, 2),
-    padding: 10,
     width: 170,
     height: 50,
-    borderRadius: theme.shape.borderRadius,
     marginTop: 49,
     fontSize: 14,
-    backgroundColor: theme.palette.primary.main,
     fontWeight: 500,
-    fontFamily: theme.typography.fontFamily,
-    '&:hover': {
-      'background-color': 'rgba(255,0,0,0.5)',
-    },
   },
   link: {
     color: 'red',

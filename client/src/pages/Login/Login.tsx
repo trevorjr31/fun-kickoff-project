@@ -1,4 +1,3 @@
-import CssBaseline from '@material-ui/core/CssBaseline';
 import Paper from '@material-ui/core/Paper';
 import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
@@ -37,7 +36,6 @@ export default function Login(): JSX.Element {
 
   return (
     <Grid container component="main" className={classes.root}>
-      <CssBaseline />
       <Grid item xs={10} sm={9} md={6} component={Paper} elevation={0}>
         <Box className={classes.authWrapper}>
           <Typography className={classes.welcome}>Welcome back</Typography>

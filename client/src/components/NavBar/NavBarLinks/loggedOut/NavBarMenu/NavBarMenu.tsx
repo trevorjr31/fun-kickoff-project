@@ -18,8 +18,8 @@ export default function NavBarMenu(): JSX.Element {
     <Box className={classes.root}>
       <Button
         className={classes.outlinedBtn}
-        id="basic-button"
-        aria-controls="basic-menu"
+        id="nav-menu-open"
+        aria-controls="nav-menu"
         aria-haspopup="true"
         aria-expanded={open ? 'true' : undefined}
         onClick={handleClick}
@@ -27,12 +27,12 @@ export default function NavBarMenu(): JSX.Element {
         ☰
       </Button>
       <Menu
-        id="basic-menu"
+        id="nav-menu"
         anchorEl={anchorEl}
         open={open}
         onClose={handleClose}
         MenuListProps={{
-          'aria-labelledby': 'basic-button',
+          'aria-labelledby': 'nav-menu-open',
         }}
       >
         <MenuItem onClick={handleClose}>
