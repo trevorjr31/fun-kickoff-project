@@ -7,17 +7,23 @@ const asyncHandler = require("express-async-handler");
 // @access Private
 exports.createProfile = asyncHandler(async (req, res, next) => {
   const body = req.body;
-
-  if (!body.userId) {
+  const id = body.userId;
+  if (!id) {
     res.status(401);
     throw new Error("Not Authorized");
+  }
+
+  const existingProfile = await Profile.findOne({ userId: [id] });
+  if (!existingProfile) {
+    res.status(400);
+    throw new Error("Profile already exists");
   }
 
   const user = await User.findById(body.userId);
 
   //create new profile
   if (user) {
-    await Profile.create({
+    const profile = await Profile.create({
       userId: user._id,
       firstName: body.firstName,
       lastName: body.lastName,
@@ -32,8 +38,11 @@ exports.createProfile = asyncHandler(async (req, res, next) => {
       hourlyRate: body.hourlyRate,
       availability: body.availability,
     });
-
-    res.send({ message: "Profile successfully created" });
+    if (!newProfile) {
+      res.status(400);
+      throw new Error("Bad request");
+    }
+    res.send("Profile successfully created");
   }
 });
 
@@ -45,9 +54,13 @@ exports.getProfile = asyncHandler(async (req, res, next) => {
 
   if (!id) {
     res.status(400);
-    throw new Error("Ivalid Profile Request");
+    throw new Error("Bad Request");
   }
   const profile = await Profile.findOne({ userId: [id] });
+  if (!profile) {
+    res.status(404);
+    throw new Error("No profile exists");
+  }
   res.send(profile);
 });
 
@@ -59,7 +72,7 @@ exports.updateProfile = asyncHandler(async (req, res, next) => {
   const body = req.body;
   if (!id) {
     res.status(400);
-    throw new Error("Ivalid Profile Edit Request");
+    throw new Error("Bad Request");
   }
   const updated = await Profile.findOneAndUpdate({ userId: id }, body, {
     new: true,
@@ -72,5 +85,9 @@ exports.updateProfile = asyncHandler(async (req, res, next) => {
 // @access Private
 exports.getAllProfiles = asyncHandler(async (req, res, next) => {
   const profiles = await Profile.find({}, "-_id -__v");
+  if (!profiles) {
+    res.status(404);
+    throw new Error("No profiles");
+  }
   res.send(profiles);
 });
