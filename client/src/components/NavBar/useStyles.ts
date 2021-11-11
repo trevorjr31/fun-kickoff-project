@@ -5,6 +5,10 @@ const useStyles = makeStyles((theme) => ({
     background: '#FFFFFF',
     boxShadow: '1px 1px 15px rgb(0,0,0,0.1)',
   },
+  link: {
+    textDecoration: 'none',
+    color: 'black',
+  },
   logo: {
     maxWidth: '203px',
     maxHeight: '36px',
