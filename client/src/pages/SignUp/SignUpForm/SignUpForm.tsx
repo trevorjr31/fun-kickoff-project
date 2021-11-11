@@ -126,14 +126,14 @@ const SignUpForm = ({ handleSubmit }: Props): JSX.Element => {
               {isSubmitting ? <CircularProgress style={{ color: 'white' }} /> : 'SIGN UP'}
             </Button>
           </Box>
-          <div style={{ height: 95, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+          <Box height="95px" display="flex" justifyContent="center" alignItems="center">
             <Typography className={classes.label}>
               Already a member?
               <Link className={classes.link} to="/login">
                 Login
               </Link>
             </Typography>
-          </div>
+          </Box>
         </form>
       )}
     </Formik>

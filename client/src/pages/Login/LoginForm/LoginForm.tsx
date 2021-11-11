@@ -101,14 +101,14 @@ export default function Login({ handleSubmit }: Props): JSX.Element {
               {isSubmitting ? <CircularProgress style={{ color: 'white' }} /> : 'LOGIN'}
             </Button>
           </Box>
-          <div style={{ height: 95, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+          <Box height="95px" display="flex" justifyContent="center" alignItems="center">
             <Typography className={classes.label}>
               Don&#39;t have an account yet?
               <Link className={classes.link} to="/signup">
                 Sign up
               </Link>
             </Typography>
-          </div>
+          </Box>
         </form>
       )}
     </Formik>

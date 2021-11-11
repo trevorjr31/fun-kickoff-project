@@ -35,20 +35,14 @@ export default function NavBarMenu(): JSX.Element {
           'aria-labelledby': 'nav-menu-open',
         }}
       >
-        <MenuItem onClick={handleClose}>
-          <Link to="/signup" className={classes.link} onClick={handleClose}>
-            <Typography className={classes.textlink}>become a sitter</Typography>
-          </Link>
+        <MenuItem component={Link} to="/signup" onClick={handleClose}>
+          <Typography className={classes.textlink}>become a sitter</Typography>
         </MenuItem>
-        <MenuItem>
-          <Link to="/login" className={classes.link} onClick={handleClose}>
-            <Typography className={classes.textlink}>login</Typography>
-          </Link>
+        <MenuItem component={Link} to="/signup">
+          <Typography className={classes.textlink}>login</Typography>
         </MenuItem>
-        <MenuItem onClick={handleClose}>
-          <Link to="/signup" className={classes.link} onClick={handleClose}>
-            <Typography className={classes.textlink}>signup</Typography>
-          </Link>
+        <MenuItem component={Link} to="/signup" onClick={handleClose}>
+          <Typography className={classes.textlink}>signup</Typography>
         </MenuItem>
       </Menu>
     </Box>
