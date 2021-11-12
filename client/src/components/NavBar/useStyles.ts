@@ -5,6 +5,10 @@ const useStyles = makeStyles((theme) => ({
     background: '#FFFFFF',
     boxShadow: '1px 1px 15px rgb(0,0,0,0.1)',
   },
+  link: {
+    textDecoration: 'none',
+    color: 'black',
+  },
   logo: {
     maxWidth: '203px',
     maxHeight: '36px',
@@ -12,7 +16,6 @@ const useStyles = makeStyles((theme) => ({
     margin: 29,
   },
   logoText: {
-    fontFamily: theme.typography.fontFamily,
     marginTop: 29,
     marginLeft: theme.spacing(-1),
     fontWeight: 700,

@@ -17,7 +17,6 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: theme.shape.borderRadius,
     fontSize: 25,
     fontWeight: 'bold',
-    textTransform: 'uppercase',
     '&:hover': {
       'background-color': 'rgb(255,0,0,0.5)',
       color: 'rgb(255,255,255)',
@@ -29,8 +28,6 @@ const useStyles = makeStyles((theme) => ({
     alignSelf: 'center',
     fontWeight: 'bold',
     fontSize: 26,
-    textTransform: 'uppercase',
-    fontFamily: theme.typography.fontFamily,
   },
 }));
 

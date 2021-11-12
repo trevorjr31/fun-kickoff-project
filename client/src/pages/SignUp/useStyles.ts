@@ -18,7 +18,6 @@ const useStyles = makeStyles(() => ({
     fontSize: 32,
     color: '#000000',
     fontWeight: theme.typography.button.fontWeight,
-    fontFamily: theme.typography.fontFamily,
   },
 }));
 
