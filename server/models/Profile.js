@@ -55,13 +55,13 @@ const profileSchema = new mongoose.Schema({
     type: Number,
   },
   availability: {
-    monday: { type: Boolean, required: true, default: false },
-    tuesday: { type: Boolean, required: true, default: false },
-    wednesday: { type: Boolean, required: true, default: false },
-    thursday: { type: Boolean, required: true, default: false },
-    friday: { type: Boolean, required: true, default: false },
-    saturday: { type: Boolean, required: true, default: false },
-    sunday: { type: Boolean, required: true, default: false },
+    monday: { start: Date, end: Date },
+    tuesday: { start: Date, end: Date },
+    wednesday: { start: Date, end: Date },
+    thursday: { start: Date, end: Date },
+    friday: { start: Date, end: Date },
+    saturday: { start: Date, end: Date },
+    sunday: { start: Date, end: Date },
   },
 });
 
