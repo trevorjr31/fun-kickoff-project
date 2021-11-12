@@ -13,6 +13,7 @@ describe("Logout Test", () => {
         .get(`/auth/logout`)
         .end((err, res) => {
           res.should.have.status(200);
+          res.text.should.be.eql("You have successfully logged out");
           done();
         });
     });
