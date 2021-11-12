@@ -19,11 +19,6 @@ export default function ProfileNav(): JSX.Element {
     setSelectedIndex(index);
   };
 
-  useEffect(() => {
-    console.log('USE EFFECT');
-    setSelectedIndex(0);
-  }, []);
-
   const profileMenuItems = [
     { link: 'edit profile', route: '/profile', icon: <EditIcon className={classes.icon} /> },
     { link: 'profile photo', route: '/profile/profile-photo', icon: <PhotoCameraIcon className={classes.icon} /> },
