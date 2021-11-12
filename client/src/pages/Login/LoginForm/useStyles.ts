@@ -6,12 +6,15 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(1),
   },
   label: {
-    fontSize: 19,
-    color: 'rgb(0,0,0,0.4)',
+    fontSize: 11,
+    fontWeight: 800,
+    fontFamily: theme.typography.fontFamily,
     paddingLeft: '5px',
+    margin: theme.spacing(2, 5, -2, 0),
+    textTransform: 'uppercase',
   },
   inputs: {
-    marginTop: '.8rem',
+    marginLeft: theme.spacing(1),
     height: '2rem',
     padding: '5px',
   },
@@ -21,14 +24,15 @@ const useStyles = makeStyles((theme) => ({
   },
   submit: {
     margin: theme.spacing(3, 2, 2),
-    padding: 10,
-    width: 160,
-    height: 56,
-    borderRadius: theme.shape.borderRadius,
+    width: 170,
+    height: 50,
     marginTop: 49,
-    fontSize: 16,
-    backgroundColor: '#3a8dff',
-    fontWeight: 'bold',
+    fontSize: 14,
+    fontWeight: 500,
+  },
+  link: {
+    color: 'red',
+    marginLeft: 3,
   },
 }));
 

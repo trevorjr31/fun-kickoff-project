@@ -1,26 +1,24 @@
 import { makeStyles } from '@material-ui/core/styles';
+import { theme } from '../../themes/theme';
 
 const useStyles = makeStyles(() => ({
   root: {
-    minHeight: '100vh',
-    '& .MuiInput-underline:before': {
-      borderBottom: '1.2px solid rgba(0, 0, 0, 0.2)',
-    },
+    display: 'flex',
+    justifyContent: 'center',
+    marginTop: 40,
   },
   authWrapper: {
     display: 'flex',
-    alignItems: 'flex-start',
-    justifyContent: 'space-between',
+    alignItems: 'center',
     flexDirection: 'column',
-    minHeight: '100vh',
-    paddingTop: 23,
+    paddingTop: 25,
+    boxShadow: '1px 1px 20px rgb(0,0,0,0.1)',
   },
   welcome: {
-    fontSize: 26,
-    paddingBottom: 20,
+    fontSize: 32,
     color: '#000000',
-    fontWeight: 700,
-    fontFamily: "'Open Sans'",
+    fontWeight: theme.typography.button.fontWeight,
+    fontFamily: theme.typography.fontFamily,
   },
 }));
 

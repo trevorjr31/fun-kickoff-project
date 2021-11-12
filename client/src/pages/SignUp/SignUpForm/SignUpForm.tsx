@@ -6,6 +6,7 @@ import * as Yup from 'yup';
 import Typography from '@material-ui/core/Typography';
 import useStyles from './useStyles';
 import { CircularProgress } from '@material-ui/core';
+import { Link } from 'react-router-dom';
 
 interface Props {
   handleSubmit: (
@@ -51,13 +52,36 @@ const SignUpForm = ({ handleSubmit }: Props): JSX.Element => {
     >
       {({ handleSubmit, handleChange, values, touched, errors, isSubmitting }) => (
         <form onSubmit={handleSubmit} className={classes.form} noValidate>
+          <Typography className={classes.label}>email address</Typography>
           <TextField
-            id="username"
-            label={<Typography className={classes.label}>Username</Typography>}
+            variant="outlined"
+            placeholder="Your email"
+            id="email"
             fullWidth
             margin="normal"
             InputLabelProps={{
-              shrink: true,
+              disableAnimation: false,
+            }}
+            InputProps={{
+              classes: { input: classes.inputs },
+            }}
+            name="email"
+            autoComplete="email"
+            autoFocus
+            helperText={touched.email ? errors.email : ''}
+            error={touched.email && Boolean(errors.email)}
+            value={values.email}
+            onChange={handleChange}
+          />
+          <Typography className={classes.label}>name</Typography>
+          <TextField
+            variant="outlined"
+            placeholder="Your username"
+            id="username"
+            fullWidth
+            margin="normal"
+            InputLabelProps={{
+              disableAnimation: false,
             }}
             InputProps={{
               classes: { input: classes.inputs },
@@ -70,27 +94,11 @@ const SignUpForm = ({ handleSubmit }: Props): JSX.Element => {
             value={values.username}
             onChange={handleChange}
           />
+          <Typography className={classes.label}>password</Typography>
           <TextField
-            id="email"
-            label={<Typography className={classes.label}>E-mail address</Typography>}
-            fullWidth
-            margin="normal"
-            InputLabelProps={{
-              shrink: true,
-            }}
-            InputProps={{
-              classes: { input: classes.inputs },
-            }}
-            name="email"
-            autoComplete="email"
-            helperText={touched.email ? errors.email : ''}
-            error={touched.email && Boolean(errors.email)}
-            value={values.email}
-            onChange={handleChange}
-          />
-          <TextField
+            variant="outlined"
+            placeholder="Create a password"
             id="password"
-            label={<Typography className={classes.label}>Password</Typography>}
             fullWidth
             margin="normal"
             InputLabelProps={{
@@ -106,16 +114,29 @@ const SignUpForm = ({ handleSubmit }: Props): JSX.Element => {
             value={values.password}
             onChange={handleChange}
           />
-
           <Box textAlign="center">
-            <Button type="submit" size="large" variant="contained" color="primary" className={classes.submit}>
-              {isSubmitting ? <CircularProgress style={{ color: 'white' }} /> : 'Create'}
+            <Button
+              type="submit"
+              disableElevation={true}
+              size="large"
+              variant="contained"
+              color="primary"
+              className={classes.submit}
+            >
+              {isSubmitting ? <CircularProgress style={{ color: 'white' }} /> : 'SIGN UP'}
             </Button>
+          </Box>
+          <Box height="95px" display="flex" justifyContent="center" alignItems="center">
+            <Typography className={classes.label}>
+              Already a member?
+              <Link className={classes.link} to="/login">
+                Login
+              </Link>
+            </Typography>
           </Box>
         </form>
       )}
     </Formik>
   );
 };
-
 export default SignUpForm;
