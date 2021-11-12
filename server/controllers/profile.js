@@ -19,10 +19,8 @@ exports.createProfile = asyncHandler(async (req, res, next) => {
     throw new Error("Profile already exists");
   }
 
-  const user = await User.findById(body.userId);
-
   //create new profile
-  if (user) {
+  if (req.user.id) {
     const profile = await Profile.create({
       userId: user._id,
       firstName: body.firstName,
@@ -75,6 +73,10 @@ exports.updateProfile = asyncHandler(async (req, res, next) => {
   if (!id) {
     res.status(400);
     throw new Error("Bad Request");
+  }
+  if (id !== req.user.id) {
+    res.status(401);
+    throw new Error("Not authorized");
   }
   const updated = await Profile.findOneAndUpdate({ userId: id }, body, {
     new: true,
