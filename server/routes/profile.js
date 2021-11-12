@@ -10,9 +10,9 @@ const {
 
 router.route("/").post(protect, createProfile);
 
-router.route("/").get(protect, getProfile);
+router.route("/:id").get(protect, getProfile);
 
-router.route("/").patch(protect, updateProfile);
+router.route("/:id").patch(protect, updateProfile);
 
 router.route("/all").get(protect, getAllProfiles);
 

@@ -10,11 +10,11 @@ exports.createProfile = asyncHandler(async (req, res, next) => {
   const id = body.userId;
   if (!id) {
     res.status(401);
-    throw new Error("Not Authorized");
+    throw new Error("Not Authorized!!!!!");
   }
 
-  const existingProfile = await Profile.findOne({ userId: [id] });
-  if (!existingProfile) {
+  const existingProfile = await Profile.findOne({ userId: id });
+  if (existingProfile) {
     res.status(400);
     throw new Error("Profile already exists");
   }
@@ -38,11 +38,13 @@ exports.createProfile = asyncHandler(async (req, res, next) => {
       hourlyRate: body.hourlyRate,
       availability: body.availability,
     });
-    if (!newProfile) {
-      res.status(400);
+    if (!profile) {
+      res.status(500);
       throw new Error("Bad request");
     }
-    res.send("Profile successfully created");
+    res
+      .status(200)
+      .send({ message: "Profile successfully created", data: profile });
   }
 });
 
@@ -50,7 +52,7 @@ exports.createProfile = asyncHandler(async (req, res, next) => {
 // @desc Get user profile with valid token
 // @access Private
 exports.getProfile = asyncHandler(async (req, res, next) => {
-  const id = req.query.id;
+  const id = req.params.id;
 
   if (!id) {
     res.status(400);
@@ -68,7 +70,7 @@ exports.getProfile = asyncHandler(async (req, res, next) => {
 // @desc Edit user profile with valid token
 // @access Private
 exports.updateProfile = asyncHandler(async (req, res, next) => {
-  const id = req.query.id;
+  const id = req.params.id;
   const body = req.body;
   if (!id) {
     res.status(400);
@@ -77,7 +79,9 @@ exports.updateProfile = asyncHandler(async (req, res, next) => {
   const updated = await Profile.findOneAndUpdate({ userId: id }, body, {
     new: true,
   });
-  res.send("Profile successfully updated");
+  res
+    .status(200)
+    .send({ message: "Profile successfully updated", data: updated });
 });
 
 // @route GET /profile/all
@@ -85,9 +89,5 @@ exports.updateProfile = asyncHandler(async (req, res, next) => {
 // @access Private
 exports.getAllProfiles = asyncHandler(async (req, res, next) => {
   const profiles = await Profile.find({}, "-_id -__v");
-  if (!profiles) {
-    res.status(404);
-    throw new Error("No profiles");
-  }
   res.send(profiles);
 });
