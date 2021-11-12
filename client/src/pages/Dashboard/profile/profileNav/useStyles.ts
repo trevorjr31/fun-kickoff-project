@@ -12,7 +12,7 @@ const useStyles = makeStyles(() => ({
   },
   profileLink: {
     fontSize: 12,
-    textTransform: 'capitalize',
+
     textDecoration: 'none',
     color: '#000000',
     fontWeight: 600,
@@ -32,6 +32,7 @@ const useStyles = makeStyles(() => ({
     },
   },
   linkText: {
+    textTransform: 'capitalize',
     [theme.breakpoints.down('sm')]: {
       display: 'none',
     },
