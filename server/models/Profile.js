@@ -2,13 +2,11 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const profileSchema = new mongoose.Schema({
-  userId: [
-    {
-      type: Schema.Types.ObjectId,
-      ref: "user",
-      required: true,
-    },
-  ],
+  userId: {
+    type: Schema.Types.ObjectId,
+    ref: "user",
+    required: true,
+  },
   firstName: {
     type: String,
     required: true,
@@ -43,6 +41,10 @@ const profileSchema = new mongoose.Schema({
   },
   gender: {
     type: String,
+    enum: {
+      values: ["Male", "Female", "Other"],
+      message: "Invalid gender",
+    },
   },
   isSitter: {
     type: Boolean,
@@ -63,4 +65,4 @@ const profileSchema = new mongoose.Schema({
   },
 });
 
-module.exports = Profile = mongoose.model("profile", profileSchema);
+module.exports = Profile = mongoose.model("Profile", profileSchema);
