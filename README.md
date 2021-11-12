@@ -20,6 +20,7 @@ An app where users can find or offer pet sitting services.
 2. Run `npm install` to install packages
 3. Create your environment variable (.env) file
 4. Run `npm run dev` to start the server
+5. Run `npm test` to run the test suite
 
 ---
 
