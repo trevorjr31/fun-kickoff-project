@@ -9,7 +9,6 @@ import PaymentIcon from '@material-ui/icons/PaymentSharp';
 import SecurityIcon from '@material-ui/icons/Security';
 import SettingsIcon from '@material-ui/icons/Settings';
 import PhotoCameraIcon from '@material-ui/icons/PhotoCamera';
-import { useEffect } from 'react';
 
 export default function ProfileNav(): JSX.Element {
   const classes = useStyles();
