@@ -9,6 +9,7 @@ import PaymentIcon from '@material-ui/icons/PaymentSharp';
 import SecurityIcon from '@material-ui/icons/Security';
 import SettingsIcon from '@material-ui/icons/Settings';
 import PhotoCameraIcon from '@material-ui/icons/PhotoCamera';
+import { Box } from '@material-ui/core';
 
 export default function ProfileNav(): JSX.Element {
   const classes = useStyles();
@@ -46,5 +47,5 @@ export default function ProfileNav(): JSX.Element {
     </List>
   );
 
-  return <div>{profileMenu}</div>;
+  return <Box>{profileMenu}</Box>;
 }
