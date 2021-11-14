@@ -1,24 +1,40 @@
-import Grid from '@material-ui/core/Grid';
-import CircularProgress from '@material-ui/core/CircularProgress';
-import { useAuth } from '../../../context/useAuthContext';
-import { useHistory } from 'react-router-dom';
+import { Box } from '@material-ui/core';
+import ProfileNav from './profileNav/ProfileNav';
+import EditProfile from './editProfile/EditProfile';
+import Payment from './payment/Payment';
+import { useLocation } from 'react-router-dom';
+import useStyles from './useStyles';
+import Settings from './settings/Settings';
+import Security from './security/Security';
+import ProfilePhoto from './profilePhoto/ProfilePhoto';
 
 export default function Profile(): JSX.Element {
-  const { loggedInUser } = useAuth();
-  const history = useHistory();
-
-  if (loggedInUser === undefined) return <CircularProgress />;
-  if (!loggedInUser) {
-    history.push('/login');
-    // loading for a split seconds until history.push works
-    return <CircularProgress />;
-  }
-
+  const location = useLocation();
+  const classes = useStyles();
+  const content = () => {
+    switch (location.pathname) {
+      case '/profile':
+        return <EditProfile />;
+      case '/profile/payment':
+        return <Payment />;
+      case '/profile/settings':
+        return <Settings />;
+      case '/profile/security':
+        return <Security />;
+      case '/profile/profile-photo':
+        return <ProfilePhoto />;
+      default:
+        break;
+    }
+  };
   return (
-    <Grid container component="main">
-      <Grid item>
-        <h2>Profile</h2>
-      </Grid>
-    </Grid>
+    <Box display="flex">
+      <ProfileNav />
+      <Box display="flex" className={classes.viewContainer}>
+        <Box display="flex" className={classes.contentContainer}>
+          {content()}
+        </Box>
+      </Box>
+    </Box>
   );
 }

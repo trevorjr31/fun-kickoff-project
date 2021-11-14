@@ -28,14 +28,13 @@ function App(): JSX.Element {
               <Switch>
                 <Route exact path="/login" component={Login} />
                 <Route exact path="/signup" component={Signup} />
-                <Route exact path="/dashboard">
-                  <Dashboard />
-                </Route>
-                <Route component={BecomeASitter} exact path="/become-a-sitter" />
-                <Route component={MySitters} exact path="/my-sitters" />
-                <Route component={MyJobs} exact path="/my-jobs" />
-                <Route component={Messages} exact path="/messages" />
-                <Route component={Profile} exact path="/profile" />
+                <Route exact path="/dashboard" component={Dashboard} />
+                <Route exact path="/become-a-sitter" component={BecomeASitter} />
+                <Route exact path="/my-sitters" component={MySitters} />
+                <Route exact path="/my-jobs" component={MyJobs} />
+                <Route exact path="/messages" component={Messages} />
+                <Route exact path="/profile" component={Profile} />
+                <Route path="/profile/:setting" component={Profile} />
                 <Route path="*">
                   <Redirect to="/login" />
                 </Route>
