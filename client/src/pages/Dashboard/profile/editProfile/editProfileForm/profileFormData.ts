@@ -26,7 +26,7 @@ for (let i = 1900; i < currentYear; i++) {
   const str = i.toString();
   years.push(str);
 }
-
+//create list for dates
 for (let i = 0; i < 32; i++) {
   const str = i.toString();
   dates.push(str);
