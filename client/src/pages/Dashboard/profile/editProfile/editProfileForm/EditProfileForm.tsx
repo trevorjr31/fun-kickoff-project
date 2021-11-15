@@ -92,8 +92,8 @@ export default function EditProfileForm(): JSX.Element {
           InputProps={{
             classes: { input: classes.inputs },
           }}
-          name="firstName"
-          autoComplete="firstName"
+          name="email"
+          autoComplete="email"
         />
       </Box>
       <Box display="flex" justifyContent="start" marginRight={1} minWidth={350}>
@@ -110,14 +110,14 @@ export default function EditProfileForm(): JSX.Element {
         <TextField
           className={classes.field}
           variant="outlined"
-          placeholder="john-doe@gmail.com"
-          id="email"
+          placeholder="Address"
+          id="address"
           margin="normal"
           InputProps={{
             classes: { input: classes.inputs },
           }}
-          name="firstName"
-          autoComplete="firstName"
+          name="address"
+          autoComplete="address"
         />
       </Box>
       <Box display="inline-flex" justifyContent="space-between" minWidth={350}>
@@ -128,13 +128,12 @@ export default function EditProfileForm(): JSX.Element {
           className={classes.field}
           variant="outlined"
           placeholder="About you"
-          id="email"
+          id="about"
           margin="dense"
           InputProps={{
             classes: { input: classes.describeInput },
           }}
-          name="firstName"
-          autoComplete="firstName"
+          name="about"
         />
       </Box>
       <Box display="flex" justifyContent="space-around" marginRight={1} minWidth={350}>
