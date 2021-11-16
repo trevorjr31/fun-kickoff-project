@@ -20,30 +20,28 @@ exports.createProfile = asyncHandler(async (req, res, next) => {
   }
 
   //create new profile
-  if (req.user.id) {
-    const profile = await Profile.create({
-      userId: user._id,
-      firstName: body.firstName,
-      lastName: body.lastName,
-      description: body.description,
-      profilePic: body.profilePic,
-      dateOfBirth: body.dateOfBirth,
-      phone: body.phone,
-      address: body.address,
-      location: body.location,
-      gender: body.gender,
-      isSitter: body.isSitter,
-      hourlyRate: body.hourlyRate,
-      availability: body.availability,
-    });
-    if (!profile) {
-      res.status(500);
-      throw new Error("Bad request");
-    }
-    res
-      .status(200)
-      .send({ message: "Profile successfully created", data: profile });
+  const profile = await Profile.create({
+    userId: user._id,
+    firstName: body.firstName,
+    lastName: body.lastName,
+    description: body.description,
+    profilePic: body.profilePic,
+    dateOfBirth: body.dateOfBirth,
+    phone: body.phone,
+    address: body.address,
+    location: body.location,
+    gender: body.gender,
+    isSitter: body.isSitter,
+    hourlyRate: body.hourlyRate,
+    availability: body.availability,
+  });
+  if (!profile) {
+    res.status(500);
+    throw new Error("Bad request");
   }
+  res
+    .status(200)
+    .send({ message: "Profile successfully created", data: profile });
 });
 
 // @route GET /profle
