@@ -13,12 +13,12 @@ const useStyles = makeStyles(() => ({
     },
   },
   viewContainer: {
-    height: '80vh',
+    minHeight: '80vh',
     width: '80vw',
     display: 'flex',
     justifyContent: 'center',
     alignitems: 'center',
-    marginTop: theme.spacing(10),
+    marginTop: theme.spacing(5),
     [theme.breakpoints.down('sm')]: {
       width: '90vw',
       marginTop: theme.spacing(4),
